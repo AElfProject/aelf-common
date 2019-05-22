@@ -1,16 +1,20 @@
 using System;
 using AElf.Types;
 
-namespace AElf
+namespace AElf.Kernel
 {
     public static class HashExtensions
     {
-        public static Hash ComputeHash(this int obj)
+        /// <summary>
+        /// Checks if a <see cref="Hash"/> instance is null.
+        /// </summary>
+        /// <param name="hash"></param>
+        /// <returns></returns>
+        public static bool IsNull(this Hash hash)
         {
-            return Hash.FromRawBytes(BitConverter.GetBytes(obj));
+            return hash == null || hash.ToHex().RemoveHexPrefix().Length == 0;
         }
-        
-        // TODO: Consider Span
+
         public static Hash Xor(this Hash hash, Hash another)
         {
             if (hash.Value.Length != another.Value.Length)
