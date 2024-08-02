@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
-    <Import Project="..\..\common.props"/>
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <Import Project="..\..\common.props" />
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <RootNamespace>AElf.Kernel</RootNamespace>
         <PackageId>AElf.Kernel.Types</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
@@ -9,14 +9,21 @@
         </Description>
     </PropertyGroup>
     <ItemGroup>
-        <ProjectReference Include="..\AElf.Types\AElf.Types.csproj"/>
+        <ProjectReference Include="..\AElf.Types\AElf.Types.csproj" />
     </ItemGroup>
     <ItemGroup>
-        <CommonMessage Include="..\..\protobuf\kernel.proto">
+        <PackageReference Include="Google.Protobuf" />
+        <PackageReference Include="Grpc.Tools">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+    </ItemGroup>
+    <ItemGroup>
+        <Protobuf Include="..\..\protobuf\kernel.proto">
             <Link>Protobuf\Proto\kernel.proto</Link>
-        </CommonMessage>
-        <CommonMessage Include="..\..\protobuf\metadata.proto">
+        </Protobuf>
+        <Protobuf Include="..\..\protobuf\metadata.proto">
             <Link>Protobuf\Proto\metadata.proto</Link>
-        </CommonMessage>
+        </Protobuf>
     </ItemGroup>
 </Project>

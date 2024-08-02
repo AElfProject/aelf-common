@@ -1,16 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
+        <TargetFramework>net8.0</TargetFramework>
         <AssemblyName>AElf.Runtime.CSharp.Tests.TestContract</AssemblyName>
         <RootNamespace>AElf.Runtime.CSharp.Tests.TestContract</RootNamespace>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
+    <PropertyGroup>
+        <ObjPath>$(MSBuildProjectDirectory)/$(BaseIntermediateOutputPath)$(Configuration)/$(TargetFramework)/</ObjPath>
+    </PropertyGroup>
+    <Target Name="ProtoGeneratedRecognition" AfterTargets="CoreCompile">
+        <ItemGroup>
+            <Compile Include="$(ObjPath)Protobuf/**/*.cs" />
+        </ItemGroup>
+    </Target>
     <ItemGroup>
-        <ProjectReference Include="..\..\src\AElf.Sdk.CSharp\AElf.Sdk.CSharp.csproj"/>
-    </ItemGroup>
-    <ItemGroup>
-        <ContractCode Include="..\..\protobuf\test_contract.proto">
-            <Link>Protobuf\Proto\test_contract.proto</Link>
-        </ContractCode>
+        <PackageReference Include="AElf.Sdk.CSharp" />
+        <PackageReference Include="AElf.Tools">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
     </ItemGroup>
 </Project>

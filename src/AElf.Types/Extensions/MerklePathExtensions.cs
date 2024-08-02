@@ -3,7 +3,6 @@ using AElf.Types;
 
 namespace AElf
 {
-
     public static class MerklePathExtensions
     {
         public static Hash ComputeRootWithLeafNode(this MerklePath path, Hash leaf)
