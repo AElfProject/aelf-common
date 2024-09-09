@@ -43,7 +43,7 @@ public interface IServiceContainer<T> : IEnumerable<T>
 public class ServiceContainerFactoryOptions<T>
 {
     /// <summary>
-    ///     if Types is null, it will return all services of T
+    /// If Types is null, it will return all services of T
     /// </summary>
     public List<Type> Types { get; set; }
 }
@@ -54,7 +54,7 @@ public class ServiceContainerFactory<T> : IServiceContainer<T>
 
     private ServiceContainerFactory()
     {
-        _services = Enumerable.Empty<T>();
+        _services = [];
     }
 
     public ServiceContainerFactory(IOptionsSnapshot<ServiceContainerFactoryOptions<T>> options,
@@ -70,7 +70,6 @@ public class ServiceContainerFactory<T> : IServiceContainer<T>
     }
 
     public static ServiceContainerFactory<T> Empty { get; } = new();
-
 
     public IEnumerator<T> GetEnumerator()
     {

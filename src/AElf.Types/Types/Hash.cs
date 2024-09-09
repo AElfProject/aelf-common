@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using Google.Protobuf;
 
-// ReSharper disable once CheckNamespace
 namespace AElf.Types
 {
-
     public partial class Hash : ICustomDiagnosticMessage, IComparable<Hash>, IEnumerable<byte>
     {
         public static readonly Hash Empty = LoadFromByteArray(Enumerable.Range(0, AElfConstants.HashByteArrayLength)

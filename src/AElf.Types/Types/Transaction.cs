@@ -3,7 +3,6 @@ using Google.Protobuf;
 
 namespace AElf.Types
 {
-
     public partial class Transaction
     {
         private Hash _transactionId;

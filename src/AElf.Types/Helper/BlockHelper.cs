@@ -4,7 +4,6 @@ using Google.Protobuf;
 
 namespace AElf
 {
-
     public static class BlockHelper
     {
         public static ByteString GetRefBlockPrefix(Hash blockHash)

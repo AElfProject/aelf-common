@@ -1,9 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\..\common.props" />
+    <Import Project="..\..\fody.props" />
 
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <RootNamespace>AElf</RootNamespace>
+        <AssemblyName>AElf.Core</AssemblyName>
         <PackageId>AElf.Core</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Description>Core components of an AElf node (logging, task queue, ...)</Description>
@@ -15,5 +17,4 @@
         <PackageReference Include="System.Threading.Tasks.Dataflow" />
         <PackageReference Include="Volo.Abp.Core" />
     </ItemGroup>
-
 </Project>

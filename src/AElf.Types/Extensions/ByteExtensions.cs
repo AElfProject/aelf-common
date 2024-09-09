@@ -5,7 +5,6 @@ using Google.Protobuf;
 
 namespace AElf
 {
-
     public static class ByteExtensions
     {
         public static string ToPlainBase58(this byte[] value)
@@ -85,7 +84,6 @@ namespace AElf
         /// <param name="array">Source array to search for needle.</param>
         /// <param name="needle">Needle we are searching for.</param>
         /// <param name="startIndex">Start index in source array.</param>
-        /// <param name="sourceLength">Number of bytes in source array, where the needle is searched for.</param>
         /// <returns>Returns starting position of the needle if it was found or <b>-1</b> otherwise.</returns>
         public static int Find(this byte[] array, byte[] needle, int startIndex = 0)
         {

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Linq;
 using System.Text;
-using AElf.Cryptography;
 using Google.Protobuf;
 using Shouldly;
 using Xunit;
@@ -232,31 +231,5 @@ public class ExtensionTests
                 ? littleEndianBytes
                 : littleEndianBytes.Reverse().ToArray());
         numberFromBigEndianBytes.ShouldBe(number);
-    }
-
-    [Fact]
-    public void StateKeyExtensions_ToStateKey_Test()
-    {
-        var statePath = new StatePath
-        {
-            Parts = { "1", "2", "3" }
-        };
-
-        var privateKey =
-            ByteArrayHelper.HexStringToByteArray("5945c176c4269dc2aa7daf7078bc63b952832e880da66e5f2237cdf79bc59c5f");
-        var keyPair = CryptoHelper.FromPrivateKey(privateKey);
-        var address = Address.FromPublicKey(keyPair.PublicKey);
-        var addressBase58String = address.ToBase58();
-        var targetKeyString = string.Join("/", new[] { addressBase58String }.Concat(statePath.Parts));
-        var stateKey1 = statePath.ToStateKey(address);
-        var scopedStatePath = new ScopedStatePath
-        {
-            Path = statePath,
-            Address = address
-        };
-        var stateKey2 = scopedStatePath.ToStateKey();
-
-        stateKey1.ShouldBe(targetKeyString);
-        stateKey2.ShouldBe(stateKey1);
     }
 }

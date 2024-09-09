@@ -1,8 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
-        <AssemblyName>AElf.Runtime.CSharp.Tests.TestContract</AssemblyName>
-        <RootNamespace>AElf.Runtime.CSharp.Tests.TestContract</RootNamespace>
+        <RootNamespace>AElf.CSharp.Core.TestContract</RootNamespace>
         <IsPackable>false</IsPackable>
     </PropertyGroup>
     <PropertyGroup>

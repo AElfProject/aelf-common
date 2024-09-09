@@ -2,7 +2,6 @@
 
 namespace AElf
 {
-
     public static class ByteArrayHelper
     {
         public static byte[] HexStringToByteArray(string hex)

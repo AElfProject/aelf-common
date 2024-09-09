@@ -3,7 +3,6 @@ using AElf.Types;
 
 namespace AElf
 {
-
     public static class StateKeyExtensions
     {
         public static string ToStateKey(this StatePath statePath, Address address)

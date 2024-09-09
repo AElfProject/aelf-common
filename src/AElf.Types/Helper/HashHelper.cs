@@ -4,8 +4,7 @@ using Google.Protobuf;
 
 namespace AElf
 {
-
-    public class HashHelper
+    public static class HashHelper
     {
         /// <summary>
         ///     Computes hash from a byte array.

@@ -3,7 +3,6 @@ using System.Linq;
 
 namespace AElf
 {
-
     public static class NumericExtensions
     {
         public static byte[] ToBytes(this long n, bool bigEndian = true)

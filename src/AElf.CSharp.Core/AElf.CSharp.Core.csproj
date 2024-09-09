@@ -1,15 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\..\common.props" />
+    <Import Project="..\..\fody.props" />
+
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
+        <AssemblyName>AElf.CSharp.Core</AssemblyName>
         <PackageId>AElf.CSharp.Core</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Description>Base definitions for C# smart contracts.</Description>
     </PropertyGroup>
-    <ItemGroup>
-        <PackageReference Include="Microsoft.CSharp" />
-    </ItemGroup>
+
     <ItemGroup>
         <ProjectReference Include="..\AElf.Types\AElf.Types.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.CSharp" />
     </ItemGroup>
 </Project>

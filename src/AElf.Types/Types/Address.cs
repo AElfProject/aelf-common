@@ -3,7 +3,6 @@ using Google.Protobuf;
 
 namespace AElf.Types
 {
-
     public partial class Address : ICustomDiagnosticMessage, IComparable<Address>
     {
         private string _formattedAddress;

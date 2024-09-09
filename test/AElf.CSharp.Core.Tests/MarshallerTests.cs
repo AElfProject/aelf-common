@@ -9,7 +9,7 @@ public class MarshallerTests : TypesCSharpTestBase
     public void StringMarshall_Test()
     {
         var stringMarshall = Marshallers.StringMarshaller;
-        var stringValue = "test";
+        const string stringValue = "test";
         var byteArray = stringMarshall.Serializer(stringValue);
         byteArray.ShouldNotBeNull();
 

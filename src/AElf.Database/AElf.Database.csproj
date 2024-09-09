@@ -1,14 +1,19 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\..\common.props" />
+    <Import Project="..\..\fody.props" />
+
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
+        <AssemblyName>AElf.Database</AssemblyName>
         <PackageId>AElf.Database</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Description>Types and definitions of the data access layer.</Description>
     </PropertyGroup>
+
     <ItemGroup>
         <ProjectReference Include="..\AElf.Core\AElf.Core.csproj" />
     </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Volo.Abp.Data" />
     </ItemGroup>

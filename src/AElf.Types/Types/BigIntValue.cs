@@ -5,7 +5,6 @@ using Google.Protobuf.WellKnownTypes;
 
 namespace AElf.Types
 {
-
     public partial class BigIntValue : IComparable, IComparable<BigIntValue>
     {
         public int CompareTo(object obj)

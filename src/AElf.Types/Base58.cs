@@ -7,7 +7,6 @@ using Google.Protobuf;
 
 namespace AElf
 {
-
     /// <summary>
     ///     From https://github.com/adamcaudill/Base58Check, for NOT dotnet core version
     ///     Base58Check Encoding / Decoding (Bitcoin-style)

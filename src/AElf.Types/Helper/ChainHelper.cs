@@ -3,7 +3,6 @@ using System.Linq;
 
 namespace AElf
 {
-
     public static class ChainHelper
     {
         public static int GetChainId(long serialNumber)

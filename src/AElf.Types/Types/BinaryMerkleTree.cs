@@ -4,7 +4,6 @@ using System.Linq;
 
 namespace AElf.Types
 {
-
     public partial class BinaryMerkleTree
     {
         public static BinaryMerkleTree FromLeafNodes(IEnumerable<Hash> leafNodes)

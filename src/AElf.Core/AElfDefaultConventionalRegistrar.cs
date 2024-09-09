@@ -9,7 +9,7 @@ namespace AElf;
 public class AElfDefaultConventionalRegistrar : DefaultConventionalRegistrar
 {
     private readonly List<string> _transientTypeSuffixes =
-        new() { "Service", "Provider", "Manager", "Store", "Factory" };
+        ["Service", "Provider", "Manager", "Store", "Factory"];
 
     protected override ServiceLifetime? GetServiceLifetimeFromClassHierarchy(Type type)
     {

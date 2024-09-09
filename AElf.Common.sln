@@ -20,7 +20,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Types.Tests", "test\AE
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.TestBase", "test\AElf.TestBase\AElf.TestBase.csproj", "{5F2BFC5D-BDF7-41AD-834C-5DA5B4DAE8B9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Runtime.CSharp.Tests.TestContract", "test\AElf.Runtime.CSharp.Tests.TestContract\AElf.Runtime.CSharp.Tests.TestContract.csproj", "{F398DA66-16B7-45D7-9B5E-9AE900462B66}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.CSharp.Core.TestContract", "test\AElf.CSharp.Core.TestContract\AElf.CSharp.Core.TestContract.csproj", "{F398DA66-16B7-45D7-9B5E-9AE900462B66}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AElf.Core", "src\AElf.Core\AElf.Core.csproj", "{6E2FE992-B862-4D44-8895-6DC38C31FB66}"
 EndProject

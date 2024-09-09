@@ -1,5 +1,5 @@
 using System;
-using AElf.Runtime.CSharp.Tests.TestContract;
+using AElf.CSharp.Core.TestContract;
 using Google.Protobuf;
 using Shouldly;
 using Xunit;
@@ -26,7 +26,7 @@ public class MethodTests : TypesCSharpTestBase
         Func<byte[], StringOutput> deserializer1 = input => StringOutput.Parser.ParseFrom(input);
 
         return new Method<StringInput, StringOutput>(MethodType.Action, nameof(TestContract),
-            nameof(TestContract.TestStringState),
+            nameof(TestContractState),
             new Marshaller<StringInput>(serializer, deserializer),
             new Marshaller<StringOutput>(serializer1, deserializer1));
     }

@@ -1,17 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\..\common.props" />
+    <Import Project="..\..\fody.props" />
+
     <PropertyGroup>
         <TargetFrameworks>netstandard2.1;net8.0</TargetFrameworks>
         <PackageId>AElf.Cryptography</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
         <Description>Cryptographic primitives used in AElf.</Description>
     </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\AElf.Types\AElf.Types.csproj" />
+    </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Secp256k1.Net" />
         <PackageReference Include="Portable.BouncyCastle" />
         <PackageReference Include="Secp256k1.Native" />
-    </ItemGroup>
-    <ItemGroup>
-        <ProjectReference Include="..\AElf.Types\AElf.Types.csproj" />
     </ItemGroup>
 </Project>

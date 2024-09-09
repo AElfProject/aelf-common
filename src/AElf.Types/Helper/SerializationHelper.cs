@@ -6,10 +6,9 @@ using Google.Protobuf;
 
 namespace AElf
 {
-
     public static class SerializationHelper
     {
-        private static readonly Dictionary<Type, Action<CodedOutputStream, object>> _primitiveWriters =
+        private static readonly Dictionary<Type, Action<CodedOutputStream, object>> PrimitiveWriters =
             new Dictionary<Type, Action<CodedOutputStream, object>>()
             {
                 { typeof(bool), (stream, value) => stream.WriteBool((bool)value) },
@@ -20,7 +19,7 @@ namespace AElf
                 { typeof(byte[]), (stream, value) => stream.WriteBytes(ByteString.CopyFrom((byte[])value)) }
             };
 
-        private static readonly Dictionary<Type, Func<CodedInputStream, object>> _primitiveReaders =
+        private static readonly Dictionary<Type, Func<CodedInputStream, object>> PrimitiveReaders =
             new Dictionary<Type, Func<CodedInputStream, object>>()
             {
                 { typeof(bool), stream => stream.ReadBool() },
@@ -33,7 +32,7 @@ namespace AElf
 
         private static Func<object, byte[]> GetPrimitiveSerializer(Type type)
         {
-            if (_primitiveWriters.TryGetValue(type, out var writer))
+            if (PrimitiveWriters.TryGetValue(type, out var writer))
                 return value =>
                 {
                     using (var mm = new MemoryStream())
@@ -51,7 +50,7 @@ namespace AElf
 
         private static Func<byte[], object> GetPrimitiveDeserializer(Type type)
         {
-            if (_primitiveReaders.TryGetValue(type, out var reader))
+            if (PrimitiveReaders.TryGetValue(type, out var reader))
                 return bytes =>
                 {
                     using (var cis = new CodedInputStream(bytes))

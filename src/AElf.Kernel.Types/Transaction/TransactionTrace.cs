@@ -4,7 +4,6 @@ using AElf.Types;
 using Google.Protobuf;
 using Google.Protobuf.Collections;
 
-// ReSharper disable once CheckNamespace
 namespace AElf.Kernel;
 
 public partial class TransactionTrace

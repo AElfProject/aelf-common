@@ -1,16 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
     <Import Project="..\..\common.props" />
+    <Import Project="..\..\fody.props" />
+
     <PropertyGroup>
         <TargetFramework>net8.0</TargetFramework>
         <RootNamespace>AElf.Kernel</RootNamespace>
+        <AssemblyName>AElf.Kernel.Types</AssemblyName>
         <PackageId>AElf.Kernel.Types</PackageId>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-        <Description>Basic (core) kernel and chain types.
-        </Description>
+        <Description>Basic (core) kernel and chain types.</Description>
     </PropertyGroup>
+
     <ItemGroup>
         <ProjectReference Include="..\AElf.Types\AElf.Types.csproj" />
     </ItemGroup>
+
     <ItemGroup>
         <PackageReference Include="Google.Protobuf" />
         <PackageReference Include="Grpc.Tools">
@@ -18,6 +22,7 @@
             <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
         </PackageReference>
     </ItemGroup>
+
     <ItemGroup>
         <Protobuf Include="..\..\protobuf\kernel.proto">
             <Link>Protobuf\Proto\kernel.proto</Link>
