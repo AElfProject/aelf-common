@@ -32,5 +32,9 @@
     <PackageVersion Include="xunit.extensibility.core" Version="2.4.2" />
     <PackageVersion Include="xunit.extensibility.execution" Version="2.4.2" />
     <PackageVersion Include="xunit.runner.visualstudio" Version="2.4.5" />
+    <PackageVersion Include="MartinCostello.Logging.XUnit" Version="0.1.0" />
+    <PackageVersion Include="Volo.Abp.Autofac" Version="8.2.2" />
+    <PackageVersion Include="Volo.Abp.TestBase" Version="8.2.2" />
+    <PackageVersion Include="NSubstitute" Version="5.2.0" />
   </ItemGroup>
 </Project>
