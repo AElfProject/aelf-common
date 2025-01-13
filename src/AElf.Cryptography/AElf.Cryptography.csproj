@@ -17,5 +17,8 @@
         <PackageReference Include="Secp256k1.Net" />
         <PackageReference Include="Portable.BouncyCastle" />
         <PackageReference Include="Secp256k1.Native" />
+        <PackageReference Include="Bn254.Net" />
+        <PackageReference Include="Rebex.Elliptic.Ed25519" />
+        <PackageReference Include="Nethereum.Web3" />
     </ItemGroup>
 </Project>

@@ -36,5 +36,8 @@
     <PackageVersion Include="Volo.Abp.Autofac" Version="8.2.2" />
     <PackageVersion Include="Volo.Abp.TestBase" Version="8.2.2" />
     <PackageVersion Include="NSubstitute" Version="5.2.0" />
+    <PackageVersion Include="Bn254.Net" Version="0.1.0" />
+    <PackageVersion Include="Rebex.Elliptic.Ed25519" Version="1.2.1" />
+    <PackageVersion Include="Nethereum.Web3" Version="4.5.0" />
   </ItemGroup>
 </Project>
